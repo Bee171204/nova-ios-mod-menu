@@ -7,8 +7,9 @@
 - ENVIRONMENT: Node.js 22, headless Chromium, Python Playwright, Swift parser; iOS build requires macOS+Xcode.
 - DESIGN: Original graphical NOVA design; Space Grotesk + DM Sans; mint accent; graphite panels; 8 categories; 25 configurable demo functions.
 - FILES: index.html, src/*, ios/*, assets/screenshots/*, docs/*, tests/*, README.md, PROMPT.md, .github/workflows/pages.yml.
-- TESTS: node --test 7/7 PASS; Chromium UI interactions, mobile view, no overflow; Swift source syntax parse success. GitHub Pages publishing status may require enabling Pages settings.
+- TESTS: Windows Node v24.21.0; npm install PASS, npm test 7/7 PASS; npm run build PASS (Vite 6.4.5). Chromium UI/mobile demo previously exercised; Swift source syntax parse success. iOS native build not run.
 - LIMITS: UI-only; no game-process modifications, hooking, IPA build, real in-game mod functionality.
-- NEXT_EXACT_STEP: Verify GitHub files/screenshots, build on Windows, optionally enable Pages in repository settings, test SwiftUI on Mac/iPhone for native release.
+- DEPLOYMENT: Repository published with 3 real screenshots and package-lock.json. GitHub Pages Settings > Build and deployment > Source = GitHub Actions enabled. Verify latest workflow and live site.
+- NEXT_EXACT_STEP: Check latest GitHub Pages workflow and live site; test SwiftUI on Mac/iPhone for native release.
 - ROLLBACK: Public Git history; ZIP artifact stored in chat. Do not modify or delete other user projects.
 - TIMESTAMP: 2026-11-08 Asia/Ho_Chi_Minh.
