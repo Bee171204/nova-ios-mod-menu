@@ -1,0 +1,15 @@
+{
+  "name": "nova-ios-mod-menu",
+  "version": "1.0.0",
+  "description": "NOVA — interactive iOS game overlay UI showcase and SwiftUI reference implementation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {"vite": "^6.3.0"},
+  "engines":{"node":">=20"}
+}

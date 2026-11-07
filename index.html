@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090c12" />
+  <meta name="description" content="NOVA — interactive iOS game overlay UI concept with native SwiftUI example, profiles and design controls. All game effects are simulated." />
+  <meta property="og:title" content="NOVA — iOS Game Overlay UI" />
+  <meta property="og:description" content="A polished, interactive game overlay concept. SwiftUI sample + responsive browser demo." />
+  <title>NOVA — iOS Game Overlay</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="backdrop-grid" aria-hidden="true"></div>
+  <div class="shell">
+    <div class="sitebar">
+      <div class="sitebar-left"><span class="live-dot"></span> CONCEPT BUILD <span class="sitebar-divider">/</span> NOVA OVERLAY</div>
+      <div class="sitebar-right"><span class="dot-text">●</span> LIVE INTERACTIVE PREVIEW <span class="sitebar-divider">/</span> 2026.11</div>
+    </div>
+    <div class="stage">
+      <div class="stage-copy">
+        <span class="eyebrow"><span class="tiny-line"></span> INTERFACE SYSTEM // 001</span>
+        <h1>CONTROL<br/><em>THE UNSEEN.</em></h1>
+        <p>One beautifully engineered overlay. Every setting exactly where you need it. Built to feel like the future of in-game control.</p>
+        <div class="stage-tags"><span>01 / SWIFTUI</span><span>02 / MODULAR</span><span>03 / RESPONSIVE</span></div>
+      </div>
+      <div class="stage-art" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div><span class="art-cross art-cross-a">+</span><span class="art-cross art-cross-b">+</span><div class="art-core"><svg viewBox="0 0 130 130"><path d="M22 96V34h18l50 61V34h18v62H89L40 35v61Z" fill="currentColor"/><path d="M15 112h100" stroke="currentColor" stroke-width="1" opacity=".3"/></svg></div><span class="art-label">NOVA / SYSTEM READY</span></div>
+      <div class="menu-wrap is-open" id="menuWrap">
+        <div class="menu-window" id="menuWindow">
+          <div class="menu-top" id="dragHandle">
+            <div class="menu-top-left"><span class="handle-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="top-path">OVERLAY / <strong id="breadcrumb">OVERVIEW</strong></span></div>
+            <div class="menu-top-right"><span class="demo-pill"><span></span> SIMULATION</span><button class="icon-button menu-minimize" id="minimizeBtn" title="Thu nhỏ menu" aria-label="Thu nhỏ menu"><svg viewBox="0 0 20 20"><path d="M4 10h12"/></svg></button><button class="icon-button" id="resetPositionBtn" title="Đưa menu về vị trí ban đầu" aria-label="Đặt lại vị trí menu"><svg viewBox="0 0 20 20"><path d="M3 10a7 7 0 1 1 2.1 5M3 15v-5h5"/></svg></button></div>
+          </div>
+          <div class="menu-body">
+            <aside class="sidebar" aria-label="Danh mục cài đặt">
+              <div class="identity"><div class="brandmark"><svg viewBox="0 0 60 60"><path d="M13 42V18h7l20 24V18h7v24h-8L20 18v24Z" fill="currentColor"/></svg><span class="brand-spark"></span></div><div><div class="brand-title">NOVA<span>®</span></div><div class="brand-caption">OVERLAY SYSTEM</div></div></div>
+              <div class="sidebar-label">WORKSPACE</div>
+              <nav class="menu-nav" id="primaryNav"></nav>
+              <div class="sidebar-label sidebar-label-secondary">PREFERENCES</div>
+              <nav class="menu-nav" id="secondaryNav"></nav>
+              <div class="sidebar-bottom"><div class="system-indicator"><span class="indicator-ring"><span></span></span><div><strong>SYSTEM ONLINE</strong><small>Local demo environment</small></div></div><div class="sidebar-version">NOVA UI v1.0.0 <span>↗</span></div></div>
+            </aside>
+            <main class="main-panel">
+              <div class="panel-header"><div><span class="panel-kicker" id="pageKicker">YOUR COMMAND CENTER</span><h2 id="pageTitle">Overview<span class="heading-period">.</span></h2></div><div class="header-tools"><button class="search-shortcut" id="searchBtn" aria-label="Tìm chức năng"><span class="search-visual">⌕</span><span>Quick find</span><kbd>⌘ K</kbd></button><button class="profile-avatar" id="profileBtn" title="Chuyển đến hồ sơ">N</button></div></div>
+              <div class="page-scroll" id="pageScroll"><div id="pageContent"></div></div>
+              <div class="panel-footer"><span>◈&nbsp; NOVA SYSTEMS</span><span id="footerHint">DEMO / NO GAME MEMORY ACCESS</span><span>BUILD 001-A</span></div>
+            </main>
+          </div>
+        </div>
+        <button class="floating-launcher" id="floatingLauncher" aria-label="Mở NOVA Overlay"><span class="float-symbol">N</span><span class="float-divider"></span><span>OPEN NOVA</span><span class="float-key">INSERT</span></button>
+      </div>
+      <div class="stage-foot"><span>DESIGNED FOR THE UNCOMPROMISING.</span><span>DRAG TO MOVE <i>↗</i> &nbsp; • &nbsp; INSERT TO TOGGLE</span></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Tìm kiếm chức năng"></div></div>
+  <input type="file" id="importFile" accept="application/json,.json" hidden />
+  <script src="src/app.js" type="module"></script>
+</body>
+</html>

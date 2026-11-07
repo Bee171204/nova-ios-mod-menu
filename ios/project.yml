@@ -1,0 +1,20 @@
+name: NOVADemo
+options:
+  bundleIdPrefix: com.novademo
+  deploymentTarget:
+    iOS: '16.0'
+targets:
+  NOVADemo:
+    type: application
+    platform: iOS
+    sources:
+      - NOVAOverlay
+      - Example
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.novademo.overlay
+        SWIFT_VERSION: '5.9'
+        TARGETED_DEVICE_FAMILY: '1,2'
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        CODE_SIGNING_ALLOWED: NO
